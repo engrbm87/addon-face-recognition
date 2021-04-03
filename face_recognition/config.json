@@ -1,0 +1,12 @@
+{
+  "name": "Face_recognition",
+  "version": "0.1",
+  "slug": "face_recognition",
+  "description": "Face recognition addon of Home Assistant",
+  "url": "https://github.com/engrbm87/ha-face-recognition",
+  "arch": ["aarch64", "amd64", "armhf", "armv7", "i386"],
+  "map": ["media:rw", "share:rw", "ssl"],
+  "schema": {
+    "log_level": "list(trace|debug|info|notice|warning|error|fatal)?"
+  }
+}
