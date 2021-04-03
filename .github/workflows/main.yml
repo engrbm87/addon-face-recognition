@@ -31,4 +31,4 @@ jobs:
           --test \
           --all \
           --target face_recognition \
-          --docker-hub -i face-recognition -d engrbm
+          --docker-hub engrbm
