@@ -22,9 +22,6 @@ COPY requirements.txt /tmp/
 
 RUN pip3 install -r /tmp/requirements.txt
 
-# Copy root filesystem
-COPY rootfs /
-
 # Build arguments
 ARG BUILD_ARCH
 ARG BUILD_DATE
