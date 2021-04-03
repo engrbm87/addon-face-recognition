@@ -2,7 +2,7 @@
 
 name: CI
 
-# Controls when the action will run. 
+# Controls when the action will run.
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   release:
@@ -30,4 +30,4 @@ jobs:
         args: |
           --all \
           --target face_recognition \
-          --docker-hub user-name-or-space-name
+          --docker-hub engrbm
