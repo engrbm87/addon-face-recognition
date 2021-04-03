@@ -30,4 +30,4 @@ jobs:
         args: |
           --all \
           --target face_recognition \
-          --docker-hub engrbm
+          --docker-hub -i face-recognition -d engrbm
