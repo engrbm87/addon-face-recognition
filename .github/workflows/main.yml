@@ -28,6 +28,7 @@ jobs:
       uses: home-assistant/builder@master
       with:
         args: |
+          --test \
           --all \
           --target face_recognition \
           --docker-hub engrbm
