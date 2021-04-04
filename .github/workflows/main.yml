@@ -31,4 +31,7 @@ jobs:
           --test \
           --all \
           --target face_recognition \
-          --docker-hub engrbm
+          -i ha-face_recognition \
+          -d engrbm \
+          --docker-user ${{ secrets.DH_USER }} \
+          --docker-password ${{ secrets.DH_PASS }}
