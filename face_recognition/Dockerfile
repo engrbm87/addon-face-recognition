@@ -7,8 +7,10 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # Setup base system
 ARG BUILD_ARCH=amd64
-RUN apt-get -y update
-RUN apt-get install -y --no-install-recommends \
+RUN \
+    apt-get -y update \
+    \
+    && apt-get install -y --no-install-recommends \
         cmake=3.10.2-1ubuntu2.18.04.1 \
         libopenblas-dev=0.2.20+ds-4 \
         liblapack-dev=3.7.1-4ubuntu1 \
