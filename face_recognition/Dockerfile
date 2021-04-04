@@ -10,8 +10,9 @@ COPY requirements.txt /tmp/
 # Setup base system
 ARG BUILD_ARCH=amd64
 RUN \
-    apt-get -y update
-RUN apt-get install -y --no-install-recommends \
+    apt-get -y update \
+    \
+    && apt-get install -y --no-install-recommends \
         build-essential=12.6 \
         cmake=3.13.4-1 \
         python3-dev=3.7.3-1 \
@@ -21,9 +22,9 @@ RUN apt-get install -y --no-install-recommends \
         python3=3.7.3-1 \
     \
     && update-alternatives \
-        --install /usr/bin/python python /usr/bin/python3 10
-
-RUN pip3 install --no-cache-dir -r /tmp/requirements.txt \
+        --install /usr/bin/python python /usr/bin/python3 10 \
+    \
+    && pip3 install --no-cache-dir -r /tmp/requirements.txt \
     \
     && find /usr/local/lib/python3.7/ -name __pycache__ -depth -exec rm -rf {} \; \
     \
