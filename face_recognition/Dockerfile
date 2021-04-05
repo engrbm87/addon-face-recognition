@@ -20,6 +20,8 @@ RUN \
         python3-pip=18.1-5 \
         python3-setuptools=40.8.0-1 \
         python3=3.7.3-1 \
+        libjpeg-dev=1:1.5.2-2+deb10u1 \
+        zlib1g-dev=1:1.2.11.dfsg-1 \
     \
     && update-alternatives \
         --install /usr/bin/python python /usr/bin/python3 10 \
