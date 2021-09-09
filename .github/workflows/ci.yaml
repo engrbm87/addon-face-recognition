@@ -3,7 +3,7 @@ name: CI
 
 # yamllint disable-line rule:truthy
 on:
-  # push:
+  push:
   pull_request:
     types:
       - opened
