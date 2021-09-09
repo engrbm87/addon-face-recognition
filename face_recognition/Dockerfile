@@ -1,4 +1,4 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base/amd64:4.1.3
+ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base/amd64:5.0.0
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -13,22 +13,22 @@ RUN \
     apt-get -y update \
     \
     && apt-get install -y --no-install-recommends \
-        build-essential=12.6 \
-        cmake=3.13.4-1 \
-        python3-dev=3.7.3-1 \
-        python3-wheel=0.32.3-2 \
-        python3-pip=18.1-5 \
-        python3-setuptools=40.8.0-1 \
-        python3=3.7.3-1 \
-        libjpeg-dev=1:1.5.2-2+deb10u1 \
-        zlib1g-dev=1:1.2.11.dfsg-1 \
+        build-essential=12.9 \
+        cmake=3.18.4-2 \
+        python3-dev=3.9.2-3 \
+        python3-wheel=0.34.2-1 \
+        python3-pip=20.3.4-4 \
+        python3-setuptools=52.0.0-4 \
+        python3=3.9.2-3 \
+        libjpeg-dev=1:2.0.6-4 \
+        zlib1g-dev=1:1.2.11.dfsg-2 \
     \
     && update-alternatives \
         --install /usr/bin/python python /usr/bin/python3 10 \
     \
     && pip3 install --no-cache-dir -r /tmp/requirements.txt \
     \
-    && find /usr/local/lib/python3.7/ -name __pycache__ -depth -exec rm -rf {} \; \
+    && find /usr/local/lib/python3.9/ -name __pycache__ -depth -exec rm -rf {} \; \
     \
     && apt-get -y autoremove \
     && apt-get -y clean \
