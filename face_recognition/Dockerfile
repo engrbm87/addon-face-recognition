@@ -10,12 +10,12 @@ COPY requirements.txt /tmp/
 # We need to copy in the patches need during build
 COPY rootfs/patches /patches
 
+
 # Setup base system
 ARG BUILD_ARCH=amd64
-RUN \
-    apt-get -y update \
-    \
-    && apt-get install -y --no-install-recommends \
+# hadolint ignore=DL3003
+RUN apt-get -y update &&\
+    apt-get install -y --no-install-recommends \
         build-essential=12.9 \
         cmake=3.18.4-2 \
         python3-dev=3.9.2-3 \
