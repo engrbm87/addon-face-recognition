@@ -50,13 +50,6 @@ RUN apt-get -y update &&\
     \
     && apt-get -y autoremove \
     && apt-get -y clean \
-    && apt-get -y remove --purge \
-        build-essential \
-        cmake \
-        python3-dev \
-        python3-wheel \
-        libffi-dev \
-        libssl-dev \
     && rm -fr \
         /tmp/* \
         /var/{cache,log}/* \
