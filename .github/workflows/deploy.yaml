@@ -66,7 +66,7 @@ jobs:
         uses: actions/cache@v2.1.6
         with:
           path: /tmp/.docker-cache
-          key: docker-${{ github.ref }}-${{ matrix.architecture }}-${{ github.sha }}
+          key: docker-${{ matrix.architecture }}-${{ github.sha }}
           restore-keys: |
             docker-${{ matrix.architecture }}
       - name: 🏗 Set up QEMU
