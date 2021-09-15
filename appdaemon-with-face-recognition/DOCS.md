@@ -4,8 +4,9 @@ AppDaemon is a loosely coupled, multithreaded, sandboxed python execution
 environment for writing automation apps for Home Assistant home automation
 software. It also provides a configurable dashboard (HADashboard) suitable
 for wall mounted tablets.
-This addon includes the [face_recognition package](https://github.com/ageitgey/face_recognition)
-which allows recognizing faces from images. Images can be retrieved from configured cameras or stored image files.
+This addon includes the [face_recognition package][face-reognition-package]
+which allows recognizing faces from images.
+Images can be retrieved from configured cameras or stored image files.
 
 ## Installation
 
@@ -13,8 +14,8 @@ The installation of this add-on is pretty straightforward and not different in
 comparison to installing any other Home Assistant add-on.
 
 1. Add <https://github.com/engrbm87/HA-addons.git> to your Hass.io instance as a repository.
-1. Search for the "AppDaemon with face recognition" add-on in the Supervisor add-on store and
-   install it.
+1. Search for the "AppDaemon with face recognition" add-on in the Supervisor add-on store 
+   and install it.
 1. Start the add-on
 1. Check the logs of the add-on to see if everything went well.
 
@@ -26,7 +27,7 @@ This automatic handling of the URL and token conflicts with the AppDaemon
 official documentation. The official documentation will state `ha_url` and
 `token` options are required. For the add-on, however, this isn't needed.
 
-Python example code for using the face recognition package can be found [here](https://github.com/engrbm87/appdaemon-with-face-recognition/tree/main/examples).
+Python example code for using the face recognition package can be found [here][example-code].
 
 ## Configuration
 
@@ -169,25 +170,7 @@ based on the following:
 
 ## Support
 
-Got questions?
-
-You have several options to get them answered:
-
-- The [Home Assistant Community Add-ons Discord chat server][discord] for add-on
-  support and feature requests.
-- The [Home Assistant Discord chat server][discord-ha] for general Home
-  Assistant discussions and questions.
-- The Home Assistant [Community Forum][forum].
-- Join the [Reddit subreddit][reddit] in [/r/homeassistant][reddit]
-
-You could also [open an issue here][issue] GitHub.
-
-## Authors & contributors
-
-The original setup of this repository is by [Franck Nijhof][frenck].
-
-For a full list of all authors and contributors,
-check [the contributor's page][contributors].
+You can [open an issue here][issue] GitHub.
 
 ## License
 
@@ -215,12 +198,9 @@ SOFTWARE.
 
 [alpine-packages]: https://pkgs.alpinelinux.org/packages
 [contributors]: https://github.com/hassio-addons/addon-appdaemon/graphs/contributors
-[discord-ha]: https://discord.gg/c5DvZ4e
-[discord]: https://discord.me/hassioaddons
-[forum]: https://community.home-assistant.io/t/home-assistant-community-add-on-appdaemon-4/163259?u=frenck
-[frenck]: https://github.com/frenck
-[issue]: https://github.com/hassio-addons/addon-appdaemon/issues
+[example-code]: https://github.com/engrbm87/appdaemon-with-face-recognition/tree/main/examples
+[face-recognition-package]: https://github.com/ageitgey/face_recognition
+[issue]: https://github.com/engrbm87/appdaemon-with-face-recognition/issues
 [python-packages]: https://pypi.org/
-[reddit]: https://reddit.com/r/homeassistant
-[releases]: https://github.com/hassio-addons/addon-appdaemon/releases
+[releases]: https://github.com/engrbm87/appdaemon-with-face-recognition/releases
 [semver]: http://semver.org/spec/v2.0.0.htm
