@@ -14,9 +14,9 @@ The installation of this add-on is pretty straightforward and not different in
 comparison to installing any other Home Assistant add-on.
 
 1. Add <https://github.com/engrbm87/HA-addons.git> to your Hass.io instance
-as a repository.
+   as a repository.
 1. Search for the "AppDaemon with face recognition" add-on in the Supervisor
-add-on store and install it.
+   add-on store and install it.
 1. Start the add-on
 1. Check the logs of the add-on to see if everything went well.
 
