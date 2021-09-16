@@ -18,6 +18,7 @@ RUN apt-get -y update &&\
     apt-get install -y --no-install-recommends \
         build-essential=12.9 \
         cmake=3.18.4-2 \
+        musl-dev=1.2.2-1 \
         python3-dev=3.9.2-3 \
         python3-wheel=0.34.2-1 \
         python3-pip=20.3.4-4 \
@@ -57,6 +58,7 @@ RUN apt-get -y update &&\
         python3-wheel \
         libffi-dev \
         libssl-dev \
+        musl-dev \
     && rm -fr \
         /tmp/* \
         /var/{cache,log}/* \
