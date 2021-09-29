@@ -1,4 +1,4 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/base/amd64:10.0.2
+ARG BUILD_FROM=ghcr.io/hassio-addons/base/amd64:10.1.0
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -7,9 +7,6 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # Copy Python requirements file
 COPY requirements.txt /tmp/
-
-# We need to copy in the patches need during build
-COPY rootfs/patches /patches
 
 # Setup base
 ARG BUILD_ARCH=amd64
@@ -33,16 +30,6 @@ RUN \
         zlib=1.2.11-r3 \
     \
     && pip3 install --no-cache-dir -r /tmp/requirements.txt \
-    \
-    && pip install \
-        --no-cache-dir \
-        --prefer-binary \
-        --find-links "https://wheels.home-assistant.io/alpine-3.14/${BUILD_ARCH}/" \
-        appdaemon==4.1.0 \
-    \
-    && cd /usr/lib/python3.9/site-packages/ \
-    && patch -p1 < /patches/force_recompile.patch \
-    && patch -p1 < /patches/hassio.patch \
     \
     && find /usr/local \
         \( -type d -a -name test -o -name tests -o -name '__pycache__' \) \
