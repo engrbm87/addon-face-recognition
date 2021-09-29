@@ -20,25 +20,25 @@ comparison to installing any other Home Assistant add-on.
 This addon including a webserver that provides the following endpoints:
 
 - `GET /faces` - Returns a list of names for known faces that are stored.
-Faces are stored in `.npz` file that is saved under `/config/face_recognition`.
+  Faces are stored in `.npz` file that is saved under `/config/face_recognition`.
 
 - `POST /faces` - Upload a new known face to store it in the database and use
-it for identification.
+  it for identification.
 
 - `DELETE /faces` - Delete a stored known face by specifying the face name.
-(the name can be retrived from `GET /faces`)
+  (the name can be retrived from `GET /faces`)
 
 - `POST /recognize` - Recognize and identify faces in uploaded image.
-(Identification requires having at least 1 known face stored to compare).
-Returns a dict of recognized faces with face locations. In case a face
-is identified the face name will be used as key instead of 'Unknown'.
+  (Identification requires having at least 1 known face stored to compare).
+  Returns a dict of recognized faces with face locations. In case a face
+  is identified the face name will be used as key instead of 'Unknown'.
 
 For `POST /faces` it expects JSON in the following format:
 
 ```json
 {
-   "name": "FACE NAME",
-   "image": "<base64 encoded image information>"
+  "name": "FACE NAME",
+  "image": "<base64 encoded image information>"
 }
 ```
 
@@ -46,7 +46,7 @@ For `DELETE /faces` it expects JSON in the following format:
 
 ```json
 {
-   "name": "FACE NAME",
+  "name": "FACE NAME"
 }
 ```
 
@@ -54,7 +54,7 @@ The result for `/faces` endpoint is returned as:
 
 ```json
 {
-   "results": "<list of face names successfully stored.>"
+  "results": "<list of face names successfully stored.>"
 }
 ```
 
@@ -62,7 +62,7 @@ For `POST /recognize` it expects JSON in the following format:
 
 ```json
 {
-   "image": "<base64 encoded image information>"
+  "image": "<base64 encoded image information>"
 }
 ```
 
@@ -70,14 +70,9 @@ The result is returned as:
 
 ```json
 {
-   "results": {
-        "Unknown-1": [
-            187,
-            1118,
-            295,
-            1011
-        ],
-   }
+  "results": {
+    "Unknown-1": [187, 1118, 295, 1011]
+  }
 }
 ```
 
