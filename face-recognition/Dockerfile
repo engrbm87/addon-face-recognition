@@ -20,7 +20,6 @@ RUN \
         py3-wheel=0.36.2-r2 \
         python3-dev=3.9.5-r1 \
         zlib-dev=1.2.11-r3 \
-        jpeg-dev=9d-r1 \
     \
     && apk add --no-cache \
         py3-pip=20.3.4-r1 \
@@ -28,6 +27,7 @@ RUN \
         python3=3.9.5-r1 \
         libjpeg=9d-r1 \
         zlib=1.2.11-r3 \
+        jpeg-dev=9d-r1 \
     \
     && pip3 install --no-cache-dir -r /tmp/requirements.txt \
     \
