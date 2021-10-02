@@ -25,9 +25,10 @@ RUN \
         py3-pip=20.3.4-r1 \
         py3-bcrypt=3.2.0-r3 \
         python3=3.9.5-r1 \
-        libjpeg=9d-r1 \
+        ffmpeg-dev=4.4-r1 \
         zlib=1.2.11-r3 \
         jpeg-dev=9d-r1 \
+        libpng-dev=1.6.37-r1 \
     \
     && pip3 install --no-cache-dir -r /tmp/requirements.txt \
     \
