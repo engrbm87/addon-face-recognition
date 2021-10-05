@@ -15,8 +15,6 @@ RUN \
     apk add --no-cache --virtual .build-dependencies \
         build-base=0.5-r2 \
         cmake=3.20.3-r0 \
-        libffi-dev=3.3-r2 \
-        openssl-dev=1.1.1l-r0 \
         py3-wheel=0.36.2-r2 \
         python3-dev=3.9.5-r1 \
         zlib-dev=1.2.11-r3 \
@@ -25,9 +23,10 @@ RUN \
         py3-pip=20.3.4-r1 \
         py3-bcrypt=3.2.0-r3 \
         python3=3.9.5-r1 \
-        libjpeg=9d-r1 \
         zlib=1.2.11-r3 \
         jpeg-dev=9d-r1 \
+        libpng-dev=1.6.37-r1 \
+        ffmpeg-dev=4.4-r1 \
     \
     && pip3 install --no-cache-dir -r /tmp/requirements.txt \
     \

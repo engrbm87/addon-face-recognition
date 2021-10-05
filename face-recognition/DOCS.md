@@ -111,7 +111,7 @@ You can [open an issue here][issue] GitHub.
 
 MIT License
 
-Copyright (c) 2021 Franck Nijhof
+Copyright (c) 2021 Rami Mousleh
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
