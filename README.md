@@ -23,7 +23,6 @@ a webserver to upload images for identification.
 [release-shield]: https://img.shields.io/badge/version-v0.4.1-blue.svg
 [release]: https://github.com/engrbm87/appdaemon-with-face-recognition/tree/0.4.1
 [license-shield]: https://img.shields.io/github/license/hassio-addons/addon-example.svg
-
 [aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
 [amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
 [armhf-shield]: https://img.shields.io/badge/armhf-yes-green.svg
